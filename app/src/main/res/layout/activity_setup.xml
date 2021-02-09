@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setup">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/permissions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="0dp"
+            android:textStyle="bold"/>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/permissions"
+            android:text="Show brightness settings on tap and long press"
+            android:checked="false"
+            android:layout_margin="5dp"
+            />
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switch1"
+            android:text="Hide Quick Settings after tapping tile"
+            android:checked="true"
+            android:layout_margin="5dp"
+            />
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switch2"
+            android:text="Save/restore manual brightness value on toggle"
+            android:checked="false"
+            android:layout_margin="5dp"
+            />
+
+
+        <WebView
+            android:id="@+id/gif1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switch3"
+            android:layout_above="@id/btn2"/>
+
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:layout_alignParentBottom="true"
+            android:text="Ok, got it!"
+            android:textSize="25sp"/>
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn2"
+            android:layout_above="@+id/btn3"
+            android:text="@string/more_apps"
+            android:textSize="25sp"/>
+        <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn3"
+            android:layout_above="@+id/btn1"
+            android:text="@string/source_code"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
